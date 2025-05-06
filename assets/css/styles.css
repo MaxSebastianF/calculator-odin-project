@@ -1,0 +1,80 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #fcfcfcdc;
+}
+@property --calculator-bg {
+  initial-value: #6f6c6c;
+  syntax: "<color>";
+  inherits: false;
+}
+
+.calculator {
+  max-width: 300px;
+  width: 90%;
+  height: auto;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.calculator .screen_display {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 1px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: end;
+  border: 2px solid #e8e8e8;
+  margin: 10px;
+}
+.pad {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 10px;
+}
+
+.pad .numeric-pad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+.pad .operator-pad {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  width: 30%;
+}
+
+button {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #e0e0e0;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d5d5d5;
+}
+
+.operator {
+  background-color: #f7a046;
+  color: white;
+}
+
+.operator:hover {
+  background-color: #e58c2f;
+}
